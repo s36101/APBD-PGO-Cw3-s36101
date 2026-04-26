@@ -5,19 +5,19 @@ public class ProduktMenu {
     private String nazwa;
     private double cena;
     private String kategoria;
-    private static int liczbaPunktow = 0;
+    private static int liczbaProduktow = 0;
 
     public ProduktMenu(String kod, String nazwa, double cena, String kategoria) {
         this.kod = kod;
         this.nazwa = nazwa;
         this.cena = cena;
         this.kategoria = kategoria;
-        liczbaPunktow++;
+        liczbaProduktow++;
     }
 
     public double getCena() { return cena; }
     public String getKod() { return kod; }
-    public static int getLiczbaPunktow() { return liczbaPunktow; }
+    public static int getLiczbaProduktow() { return liczbaProduktow; }
 
     @Override
     public String toString() {
@@ -29,7 +29,7 @@ public class ProduktMenu {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ProduktMenu that = (ProduktMenu) o;
-        return Objects.equals((kod, that.kod);)
+        return Objects.equals(kod, that.kod);
     }
 
     @Override
