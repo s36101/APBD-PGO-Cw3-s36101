@@ -1,0 +1,37 @@
+import java.util.Objects;
+
+public class ProduktMenu {
+    private String kod;
+    private String nazwa;
+    private double cena;
+    private String kategoria;
+    private static int liczbaPunktow = 0;
+
+    public ProduktMenu(String kod, String nazwa, double cena, String kategoria) {
+        this.kod = kod;
+        this.nazwa = nazwa;
+        this.cena = cena;
+        this.kategoria = kategoria;
+        liczbaPunktow++;
+    }
+
+    public double getCena() { return cena; }
+    public String getKod() { return kod; }
+    public static int getLiczbaPunktow() { return liczbaPunktow; }
+
+    @Override
+    public String toString() {
+        return "Produkt [" + kod + "], " + nazwa + ", (" + kategoria + ") - " + cena + " zł";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ProduktMenu that = (ProduktMenu) o;
+        return Objects.equals((kod, that.kod);)
+    }
+
+    @Override
+    public int hashCode() { return Objects.hash(kod); }
+}
