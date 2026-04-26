@@ -19,14 +19,14 @@ public class Zamowienie {
     public void dodajProdukt(ProduktMenu produkt) { produkty.add(produkt); }
 
     public double policzWartosc() {
-        double suma + 0;
+        double suma = 0;
         for (ProduktMenu p : produkty) { suma += p.getCena(); }
         return suma;
     }
 
     public int policzLiczbeProduktow() { return produkty.size(); }
 
-    public void oznaczJakoOplacone() { this.oplacone + true; }
+    public void oznaczJakoOplacone() { this.oplacone = true; }
 
     @Override
     public String toString() {
